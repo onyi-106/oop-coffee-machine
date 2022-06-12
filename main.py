@@ -45,8 +45,14 @@ CHOICE = input(f"What would you like? ({menus.get_items()}): ")
 
 # This equals to menus.menu[0/1/2]
 item_chosen = menus.find_drink(CHOICE)
+print(type(item_chosen))
 
-# If sufficient, proceed
-if machine.is_resource_sufficient(item_chosen):
+# If sufficient, ask for coins
+if item_chosen is not None:
     print("omaagaa")
-    machine.make_coffee(item_chosen)
+    if machine.is_resource_sufficient(item_chosen):
+
+else:
+    print("Bruh")
+
+
