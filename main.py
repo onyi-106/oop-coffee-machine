@@ -18,7 +18,7 @@ while not machine_off:
     # Make report command
     elif CHOICE == "report":
         machine.report()
-        print(f"Profit: {money.CURRENCY}{money.profit}")
+        money.report()
 
     # menus.find_drink(CHOICE) equals to:  menus.menu[0/1/2]
     elif menus.find_drink(CHOICE) is not None:
